@@ -36,7 +36,6 @@ Second
 
 AM/PM
 %p a.m. or p.m.
-%r time in a.m. and p.m. notation.
 
 Timezone
 %Z timezone name.
@@ -44,6 +43,7 @@ Timezone
 Combinations
 %c date and time.
 %D same as %m/%d/%y.
+%r time in a.m. and p.m. notation.
 %R time in 24 hour notation (%H:%M).
 %T time (%H:%M:%S).
 %x date.
