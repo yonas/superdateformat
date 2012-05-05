@@ -6,6 +6,7 @@
         <em:version>1.0</em:version>
         <em:description>Customize the date column in Thunderbird</em:description>
         <em:creator>Yonas Yanfa</em:creator>
+        <em:optionsURL>chrome://messenger/content/preferences/preferences.xul</em:optionsURL>
         <em:iconURL>chrome://superdateformat/content/icon.png</em:iconURL>
 
         <em:targetApplication>

@@ -240,6 +240,7 @@
                         <vbox id="superDateFormatPreferencesBoxPreferences">
 			   <label id="dateColumnNameLabel" control="dateColumnNameBox" value="Date column name:"/>
 			   <textbox id="dateColumnNameBox" preference="superDateFormat.dateColumnName"/>
+			   <description>* Requires restart</description>
 			</vbox>
                     </tabpanel>
                 </tabpanels>
