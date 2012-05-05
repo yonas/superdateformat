@@ -8,12 +8,13 @@
         <em:creator>Yonas Yanfa</em:creator>
         <em:optionsURL>chrome://messenger/content/preferences/preferences.xul</em:optionsURL>
         <em:iconURL>chrome://superdateformat/content/icon.png</em:iconURL>
+        <em:type>2</em:type>
 
         <em:targetApplication>
             <Description>
                 <em:id>{3550f703-e582-4d05-9a08-453d09bdfdc6}</em:id>
                 <em:minVersion>10.0</em:minVersion>
-                <em:maxVersion>12.0.*</em:maxVersion>
+                <em:maxVersion>12.*</em:maxVersion>
             </Description>
         </em:targetApplication>
 

@@ -1,5 +1,5 @@
 function superDateFormat_PrefManager() {
-    var startPoint="superDateFormat.";
+    var startPoint="extensions.superDateFormat.";
 
     var pref=Components.classes["@mozilla.org/preferences-service;1"].
         getService(Components.interfaces.nsIPrefService).

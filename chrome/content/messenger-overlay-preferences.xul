@@ -7,11 +7,11 @@
         <prefpane id="paneSuperDateFormat" 
                   label="Date Format">
             <preferences>
-                <preference id="superDateFormat.dateFormat"
-		            name="superDateFormat.dateFormat"
+                <preference id="extensions.superDateFormat.dateFormat"
+		            name="extensions.superDateFormat.dateFormat"
                             type="string"/>
-                <preference id="superDateFormat.dateColumnName"
-		            name="superDateFormat.dateColumnName"
+                <preference id="extensions.superDateFormat.dateColumnName"
+		            name="extensions.superDateFormat.dateColumnName"
                             type="string"/>
             </preferences>
             <tabbox id="superdateFormatPreferencesTabbox" 
@@ -26,7 +26,7 @@
                     <tabpanel orient="vertical">
                         <vbox id="superDateFormatPreferencesBoxGeneral">
 			   <label id="dateFormatLabel" control="dateFormatBox" value="Date format:"/>
-			   <textbox id="dateFormatBox" preference="superDateFormat.dateFormat"/>
+			   <textbox id="dateFormatBox" preference="extensions.superDateFormat.dateFormat"/>
 			   <listbox id="theList" rows="10" width="400">
 				   <listhead>
 					   <listheader label="Symbol" width="100"/>
@@ -239,7 +239,7 @@
                     <tabpanel orient="vertical">
                         <vbox id="superDateFormatPreferencesBoxPreferences">
 			   <label id="dateColumnNameLabel" control="dateColumnNameBox" value="Date column name:"/>
-			   <textbox id="dateColumnNameBox" preference="superDateFormat.dateColumnName"/>
+			   <textbox id="dateColumnNameBox" preference="extensions.superDateFormat.dateColumnName"/>
 			   <description>* Requires restart</description>
 			</vbox>
                     </tabpanel>
