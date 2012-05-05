@@ -183,10 +183,6 @@
 				  <listcell label="%p"/>
 				  <listcell label="a.m. or p.m."/>
 				</listitem>
-				<listitem>
-				  <listcell label="%r"/>
-				  <listcell label="time in a.m. and p.m. notation."/>
-				</listitem>
 
 				<listitem>
 				  <listcell label=""/>
@@ -216,6 +212,10 @@
 				<listitem>
 				  <listcell label="%D"/>
 				  <listcell label="same as %m/%d/%y."/>
+				</listitem>
+				<listitem>
+				  <listcell label="%r"/>
+				  <listcell label="time in a.m. and p.m. notation."/>
 				</listitem>
 				<listitem>
 				  <listcell label="%R"/>
