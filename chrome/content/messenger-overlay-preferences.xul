@@ -4,8 +4,7 @@
 <overlay xmlns="http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul">
 
     <prefwindow id="MailPreferences">
-        <prefpane id="paneSuperDateFormat" 
-                  label="Date Format">
+        <prefpane id="paneSuperDateFormat">
             <preferences>
                 <preference id="extensions.superDateFormat.dateFormat"
 		            name="extensions.superDateFormat.dateFormat"
@@ -14,16 +13,15 @@
 		            name="extensions.superDateFormat.dateColumnName"
                             type="string"/>
             </preferences>
-            <tabbox id="superdateFormatPreferencesTabbox" 
-                    flex="1">
-                <tabs>
+            <tabbox id="superDateFormatTabBox">
+                <tabs id="superDateFormatTabs">
                     <tab id="superDateFormatPreferencesTabGeneral"
-                         label="General"/>
+                         label="Date Format"/>
                     <tab id="superDateFormatPreferencesTabPreferences"
-                         label="Preferences"/>
+                         label="Date Format Preferences"/>
                 </tabs>
-                <tabpanels flex="1">
-                    <tabpanel orient="vertical">
+                <tabpanels id="superDateFormatTabPanels" flex="1">
+                    <tabpanel id="superDateFormatTabPanelGeneral" orient="vertical">
                         <vbox id="superDateFormatPreferencesBoxGeneral">
 			   <label id="dateFormatLabel" control="dateFormatBox" value="Date format:"/>
 			   <textbox id="dateFormatBox" preference="extensions.superDateFormat.dateFormat"/>
@@ -236,7 +234,7 @@
 			   </listbox>
 			</vbox>
                     </tabpanel>
-                    <tabpanel orient="vertical">
+                    <tabpanel id="superDateFormatTabPanelPreferences" orient="vertical">
                         <vbox id="superDateFormatPreferencesBoxPreferences">
 			   <label id="dateColumnNameLabel" control="dateColumnNameBox" value="Date column name:"/>
 			   <textbox id="dateColumnNameBox" preference="extensions.superDateFormat.dateColumnName"/>
@@ -248,4 +246,6 @@
         </prefpane>
     </prefwindow>
 
+  <!-- include our javascript file -->
+  <script type="text/javascript" src="chrome://superdateformat/content/messenger-overlay-preferences.js"/> 
 </overlay>

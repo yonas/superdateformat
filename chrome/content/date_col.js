@@ -37,4 +37,5 @@ function doOnceLoaded() {
   ObserverService.addObserver(CreateDbObserver, "MsgCreateDBView", false);
 }
 
+
 window.addEventListener("load", doOnceLoaded, false);
