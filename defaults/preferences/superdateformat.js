@@ -1,3 +1,3 @@
 
-pref('superdateformat.dateFormat', '%b %M, %Y   %I:%M %p');
-pref('superdateformat.dateColumnName', 'Super Date Format');
+pref('superDateFormat.dateFormat', '%b %M, %Y   %I:%M %p');
+pref('superDateFormat.dateColumnName', 'Super Date Format');

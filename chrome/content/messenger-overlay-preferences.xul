@@ -25,10 +25,14 @@
                 </tabs>
                 <tabpanels flex="1">
                     <tabpanel orient="vertical">
-                        <vbox id="superDateFormatPreferencesBoxGeneral"/>
+                        <vbox id="superDateFormatPreferencesBoxGeneral">
+			   <textbox id="dateFormatBox" preference="superDateFormat.dateFormat"/>
+			</vbox>
                     </tabpanel>
                     <tabpanel orient="vertical">
-                        <vbox id="superDateFormatPreferencesBoxPreferences"/>
+                        <vbox id="superDateFormatPreferencesBoxPreferences">
+			   <textbox id="dateColumnNameBox" preference="superDateFormat.dateColumnName"/>
+			</vbox>
                     </tabpanel>
                 </tabpanels>
             </tabbox>

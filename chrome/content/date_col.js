@@ -2,10 +2,13 @@ var prefs = new superDateFormat_PrefManager();
 
 var columnHandler = {
    getCellText:         function(row, col) {
-      var date =  new Date(hdr.date);
-      return date.toLocaleFormat(prefs.getValue('dateFormat'));
+      //get the message's header so that we can extract the date field
+      var hdr = gDBView.getMsgHdrAt(row);
+      var date = new Date(hdr.date);
+      
+      return date.toLocaleFormat(prefs.getValue('dateFormat', ''));
    },
-   getSortStringForRow: function(hdr) {return hdr.date}
+   getSortStringForRow: function(hdr) {return hdr.date},
    isString:            function() {return true;},
 
    getCellProperties:   function(row, col, props){},
@@ -22,6 +25,9 @@ var CreateDbObserver = {
   // Components.interfaces.nsIObserver
   observe: function(aMsgFolder, aTopic, aData)
   {  
+     var col = document.getElementById('colDate2');
+     col.setAttribute('label', prefs.getValue('dateColumnName', 'Super Date Format'));
+
      addCustomColumnHandler();
   }
 }
