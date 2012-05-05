@@ -1,6 +1,6 @@
 var superDateFormat = {
 	preferencesInit: function() {
-	     if (window.isSuperTab)
+	     if (window.isSuperDateFormatTab)
 		return;
 
 	     var tabs = new Array(document.getElementById('superDateFormatPreferencesTabGeneral'), document.getElementById('superDateFormatPreferencesTabPreferences'));
@@ -9,15 +9,22 @@ var superDateFormat = {
 	     var displayTabs = displayPreferences.firstChild;
 	     var displayPanels = displayPreferences.firstChild.nextSibling;
 
+	     // Set the Date Format Preferences tab as being the last tab
+             tabs[ tabs.length - 1 ].setAttribute('last-tab', true);
+
+	     // Add tabs to the Display Preferences pane
 	     for (tab in tabs) {
+                tabs[tab].setAttribute('first-tab', false);
+                tabs[tab].setAttribute('selected', false);
 		displayTabs.appendChild(tabs[tab]);
 	     }
 
+	     // Add panels to the Display Preferences pane
 	     for (panel in panels) {
 		displayPanels.appendChild(panels[panel]);
 	     }
-
-	     window.isSuperTab = true;
+	     
+	     window.isSuperDateFormatTab = true;
         }
 };
 
