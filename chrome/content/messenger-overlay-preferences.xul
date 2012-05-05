@@ -1,6 +1,5 @@
 <?xml version="1.0"?>
-
-<?xml-stylesheet href="chrome://superdateformat/skin/style.css"?>
+<?xml-stylesheet href="chrome://superdateformat/skin/style.css" style="text/css" ?>
 
 <overlay xmlns="http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul">
 
@@ -26,11 +25,220 @@
                 <tabpanels flex="1">
                     <tabpanel orient="vertical">
                         <vbox id="superDateFormatPreferencesBoxGeneral">
+			   <label id="dateFormatLabel" control="dateFormatBox" value="Date format:"/>
 			   <textbox id="dateFormatBox" preference="superDateFormat.dateFormat"/>
+			   <listbox id="theList" rows="10" width="400">
+				   <listhead>
+					   <listheader label="Symbol" width="100"/>
+					   <listheader label="" width="500"/>
+				   </listhead>
+				   <listcols>
+					   <listcol/>
+					   <listcol flex="1"/>
+				   </listcols>
+				<listitem>
+				  <listcell label="Day"/>
+				  <listcell label=""/>
+				</listitem>
+				<listitem>
+				  <listcell label="%a"/>
+				  <listcell label="abbreviated weekday name."/>
+				</listitem>
+				<listitem>
+				  <listcell label="%A"/>
+				  <listcell label="full weekday name."/>
+				</listitem>
+				<listitem>
+				  <listcell label="%d"/>
+				  <listcell label="day of the month [01,31]."/>
+				</listitem>
+				<listitem>
+				  <listcell label="%e"/>
+				  <listcell label="day of the month [1,31]; "/>
+				</listitem>
+				<listitem>
+				  <listcell label="%j"/>
+				  <listcell label="day of the year [001,366]."/>
+				</listitem>
+
+				<listitem>
+				  <listcell label=""/>
+				  <listcell label=""/>
+				</listitem>
+				<listitem>
+				  <listcell label="Month"/>
+				  <listcell label=""/>
+				</listitem>
+				<listitem>
+				  <listcell label="%b"/>
+				  <listcell label="abbreviated month name."/>
+				</listitem>
+				<listitem>
+				  <listcell label="%B"/>
+				  <listcell label="full month name."/>
+				</listitem>
+				<listitem>
+				  <listcell label="%m"/>
+				  <listcell label="month [01,12]."/>
+				</listitem>
+
+				<listitem>
+				  <listcell label=""/>
+				  <listcell label=""/>
+				</listitem>
+				<listitem>
+				  <listcell label="Year"/>
+				  <listcell label=""/>
+				</listitem>
+				<listitem>
+				  <listcell label="%y"/>
+				  <listcell label="year without century [00,99]."/>
+				</listitem>
+				<listitem>
+				  <listcell label="%Y"/>
+				  <listcell label="full year."/>
+				</listitem>
+
+				<listitem>
+				  <listcell label=""/>
+				  <listcell label=""/>
+				</listitem>
+				<listitem>
+				  <listcell label="Week"/>
+				  <listcell label=""/>
+				</listitem>
+				<listitem>
+				  <listcell label="%u"/>
+				  <listcell label="weekday [1,7], with 1 representing Monday."/>
+				</listitem>
+				<listitem>
+				  <listcell label="%U"/>
+				  <listcell label="week number of the year (Sunday as the first day of the week) [00,53]."/>
+				</listitem>
+				<listitem>
+				  <listcell label="%V"/>
+				  <listcell label="week number of the year (Monday as the first day of the week) [01,53]. "/>
+				</listitem>
+				<listitem>
+				  <listcell label="%w"/>
+				  <listcell label="weekday [0,6], with 0 representing Sunday."/>
+				</listitem>
+				<listitem>
+				  <listcell label="%W"/>
+				  <listcell label="week number of the year (Monday as the first day of the week) [00,53]."/>
+				</listitem>
+
+				<listitem>
+				  <listcell label=""/>
+				  <listcell label=""/>
+				</listitem>
+				<listitem>
+				  <listcell label="Hour"/>
+				  <listcell label=""/>
+				</listitem>
+				<listitem>
+				  <listcell label="%H"/>
+				  <listcell label="hour (24-hour clock) [00,23]."/>
+				</listitem>
+				<listitem>
+				  <listcell label="%I"/>
+				  <listcell label="hour (12-hour clock) [01,12]."/>
+				</listitem>
+
+				<listitem>
+				  <listcell label=""/>
+				  <listcell label=""/>
+				</listitem>
+				<listitem>
+				  <listcell label="Minute"/>
+				  <listcell label=""/>
+				</listitem>
+				<listitem>
+				  <listcell label="%M"/>
+				  <listcell label="minute [00,59]."/>
+				</listitem>
+
+				<listitem>
+				  <listcell label=""/>
+				  <listcell label=""/>
+				</listitem>
+				<listitem>
+				  <listcell label="Second"/>
+				  <listcell label=""/>
+				</listitem>
+				<listitem>
+				  <listcell label="%S"/>
+				  <listcell label="second [00,61]."/>
+				</listitem>
+
+				<listitem>
+				  <listcell label=""/>
+				  <listcell label=""/>
+				</listitem>
+				<listitem>
+				  <listcell label="AM/PM"/>
+				  <listcell label=""/>
+				</listitem>
+				<listitem>
+				  <listcell label="%p"/>
+				  <listcell label="a.m. or p.m."/>
+				</listitem>
+				<listitem>
+				  <listcell label="%r"/>
+				  <listcell label="time in a.m. and p.m. notation."/>
+				</listitem>
+
+				<listitem>
+				  <listcell label=""/>
+				  <listcell label=""/>
+				</listitem>
+				<listitem>
+				  <listcell label="Timezone"/>
+				  <listcell label=""/>
+				</listitem>
+				<listitem>
+				  <listcell label="%Z"/>
+				  <listcell label="timezone name."/>
+				</listitem>
+
+				<listitem>
+				  <listcell label=""/>
+				  <listcell label=""/>
+				</listitem>
+				<listitem>
+				  <listcell label="Combinations"/>
+				  <listcell label=""/>
+				</listitem>
+				<listitem>
+				  <listcell label="%c"/>
+				  <listcell label="date and time."/>
+				</listitem>
+				<listitem>
+				  <listcell label="%D"/>
+				  <listcell label="same as %m/%d/%y."/>
+				</listitem>
+				<listitem>
+				  <listcell label="%R"/>
+				  <listcell label="time in 24 hour notation (%H:%M)."/>
+				</listitem>
+				<listitem>
+				  <listcell label="%T"/>
+				  <listcell label="time (%H:%M:%S)."/>
+				</listitem>
+				<listitem>
+				  <listcell label="%x"/>
+				  <listcell label="date."/>
+				</listitem>
+				<listitem>
+				  <listcell label="%X"/>
+				  <listcell label="time."/>
+				</listitem>
+			   </listbox>
 			</vbox>
                     </tabpanel>
                     <tabpanel orient="vertical">
                         <vbox id="superDateFormatPreferencesBoxPreferences">
+			   <label id="dateColumnNameLabel" control="dateColumnNameBox" value="Date column name:"/>
 			   <textbox id="dateColumnNameBox" preference="superDateFormat.dateColumnName"/>
 			</vbox>
                     </tabpanel>
