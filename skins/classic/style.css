@@ -1,0 +1,13 @@
+radio[pane] {
+  list-style-image:url("chrome://kudoscoins/skin/icon32.png");
+}
+
+/*
+radio[pane=kcPaneGeneral] {
+    -moz-image-region:rect(0px,32px,32px,0px);
+}
+
+radio[pane=kcPaneGeneral]:hover, radio[pane=kcPaneGeneral][selected="true"] {
+    -moz-image-region:rect(32px,32px,64px,0px);
+}
+*/

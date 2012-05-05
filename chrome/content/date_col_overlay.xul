@@ -1,0 +1,16 @@
+<?xml version="1.0"?>
+<overlay id="superDateFormatOverlay"
+         xmlns="http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul">
+  <tree id="threadTree">
+    <treecols id="threadCols">
+    <splitter class="tree-splitter" />
+    <treecol id="colDate2" persist="hidden ordinal width" 
+           currentView="unthreaded" flex="2"
+           label="Super Date Format" tooltiptext="Click to sort by date" />
+    </treecols>
+  </tree>
+  
+  <!-- include our javascript file -->
+  <script type="text/javascript" src="chrome://superdateformat/content/prefman.js"/> 
+  <script type="text/javascript" src="chrome://superdateformat/content/date_col.js"/> 
+</overlay>

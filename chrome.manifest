@@ -1,0 +1,7 @@
+content    superdateformat    chrome/content/
+
+skin    superdateformat classic/1.0 skin/classic/
+
+overlay chrome://messenger/content/messenger.xul chrome://superdateformat/content/date_col_overlay.xul
+overlay chrome://messenger/content/messenger.xul chrome://superdateformat/content/date_col_overlay.xul
+overlay chrome://messenger/content/preferences/preferences.xul chrome://superdateformat/content/messenger-overlay-preferences.xul

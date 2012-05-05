@@ -1,0 +1,38 @@
+<?xml version="1.0"?>
+
+<?xml-stylesheet href="chrome://superdateformat/skin/style.css"?>
+
+<overlay xmlns="http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul">
+
+    <prefwindow id="MailPreferences">
+        <prefpane id="paneSuperDateFormat" 
+                  label="Date Format">
+            <preferences>
+                <preference id="superDateFormat.dateFormat"
+		            name="superDateFormat.dateFormat"
+                            type="string"/>
+                <preference id="superDateFormat.dateColumnName"
+		            name="superDateFormat.dateColumnName"
+                            type="string"/>
+            </preferences>
+            <tabbox id="superdateFormatPreferencesTabbox" 
+                    flex="1">
+                <tabs>
+                    <tab id="superDateFormatPreferencesTabGeneral"
+                         label="General"/>
+                    <tab id="superDateFormatPreferencesTabPreferences"
+                         label="Preferences"/>
+                </tabs>
+                <tabpanels flex="1">
+                    <tabpanel orient="vertical">
+                        <vbox id="superDateFormatPreferencesBoxGeneral"/>
+                    </tabpanel>
+                    <tabpanel orient="vertical">
+                        <vbox id="superDateFormatPreferencesBoxPreferences"/>
+                    </tabpanel>
+                </tabpanels>
+            </tabbox>
+        </prefpane>
+    </prefwindow>
+
+</overlay>
