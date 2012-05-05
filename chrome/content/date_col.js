@@ -26,7 +26,7 @@ var CreateDbObserver = {
   observe: function(aMsgFolder, aTopic, aData)
   {  
      var col = document.getElementById('colDate2');
-     col.setAttribute('label', prefs.getValue('dateColumnName', 'Super Date Format'));
+     col.setAttribute('label', prefs.getValue('dateColumnName', ''));
 
      addCustomColumnHandler();
   }
