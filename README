@@ -1,0 +1,50 @@
+Conversions
+---------------------
+
+Day
+%a abbreviated weekday name.
+%A full weekday name.
+%d day of the month [01,31].
+%e day of the month [1,31]; 
+%j day of the year [001,366].
+
+Month
+%b abbreviated month name.
+%B full month name.
+%m month [01,12].
+
+Year
+%y year without century [00,99].
+%Y full year.
+
+Week
+%u weekday [1,7], with 1 representing Monday.
+%U week number of the year (Sunday as the first day of the week) [00,53].
+%V week number of the year (Monday as the first day of the week) [01,53]. 
+%w weekday [0,6], with 0 representing Sunday.
+%W week number of the year (Monday as the first day of the week) [00,53].
+
+Hour
+%H hour (24-hour clock) [00,23].
+%I hour (12-hour clock) [01,12].
+
+Minute
+%M minute [00,59].
+
+Second
+%S second [00,61].
+
+AM/PM
+%p a.m. or p.m.
+%r time in a.m. and p.m. notation.
+
+Timezone
+%Z timezone name.
+
+Combinations
+%c date and time.
+%D same as %m/%d/%y.
+%R time in 24 hour notation (%H:%M).
+%T time (%H:%M:%S).
+%x date.
+%X time.
