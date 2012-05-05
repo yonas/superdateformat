@@ -4,7 +4,7 @@ var columnHandler = {
    getCellText:         function(row, col) {
       //get the message's header so that we can extract the date field
       var hdr = gDBView.getMsgHdrAt(row);
-      var date = new Date(hdr.date);
+      var date = new Date(hdr.date/1000);
       
       return date.toLocaleFormat(prefs.getValue('dateFormat', ''));
    },
