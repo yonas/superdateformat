@@ -5,7 +5,7 @@
     <treecols id="threadCols">
     <splitter class="tree-splitter" />
     <treecol id="colDate2" persist="hidden ordinal width" 
-           currentView="unthreaded" flex="2"
+           currentView="unthreaded" flex="2" sortActive="true" sortDirection="descending"
            label="Super Date Format" tooltiptext="Click to sort by date" />
     </treecols>
   </tree>

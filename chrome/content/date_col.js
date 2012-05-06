@@ -8,13 +8,13 @@ var columnHandler = {
       
       return date.toLocaleFormat(prefs.getValue('dateFormat', ''));
    },
-   getSortStringForRow: function(hdr) {return hdr.date},
+   getSortStringForRow: function(hdr) {return hdr.date;},
    isString:            function() {return true;},
 
    getCellProperties:   function(row, col, props){},
    getRowProperties:    function(row, props){},
    getImageSrc:         function(row, col) {return null;},
-   getSortLongForRow:   function(hdr) {return 0;}
+   getSortLongForRow:   function(hdr) {return hdr.date;}
 }
 
 function addCustomColumnHandler() {
@@ -25,10 +25,10 @@ var CreateDbObserver = {
   // Components.interfaces.nsIObserver
   observe: function(aMsgFolder, aTopic, aData)
   {  
+     addCustomColumnHandler();
+
      var col = document.getElementById('colDate2');
      col.setAttribute('label', prefs.getValue('dateColumnName', ''));
-
-     addCustomColumnHandler();
   }
 }
 
