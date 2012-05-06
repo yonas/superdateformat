@@ -1,3 +1,5 @@
 radio[pane=paneSuperDateFormat] {
-  list-style-image:url("chrome://superdateformat/skin/icon32.png");
+  /*list-style-image:url("chrome://superdateformat/skin/icon32.png");*/
+  display: none;
+  visibility: hidden;
 }

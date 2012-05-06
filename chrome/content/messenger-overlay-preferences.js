@@ -21,7 +21,7 @@ var superDateFormat = {
         var displayPanels = displayTabBox.firstChild.nextSibling; // Get Thunderbird Display Preferences panels
         var displayPreferences = document.getElementById('displayPreferences'); // Get Thunderbird Display Preferences preferences
 
-        // Set the Date Format Preferences tab as being the last tab
+        // Set the Date Format preferences tab as being the last tab
         tabs[ tabs.length - 1 ].setAttribute('last-tab', true);
 
         // Add tabs to the Display Preferences pane
@@ -40,10 +40,6 @@ var superDateFormat = {
         for (preference in preferences) {
             displayPreferences.appendChild(preferences[preference]);
         }
-
-        // Remove the pane
-        var pane = document.getElementById('paneSuperDateFormat');
-        pane.parent.removeChild(pane);
 
         // Mark that we have moved the Super Date Format pane
         window.isSuperDateFormatTab = true;
