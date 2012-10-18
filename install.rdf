@@ -4,7 +4,7 @@
         <em:id>superdateformat@buildontechnologies.com</em:id>
         <em:name>Super Date Format</em:name>
         <em:version>1.0</em:version>
-        <em:description>Provides a new date column that you can fully customize.</em:description>
+        <em:description>Fully customize the date format of the Date/Received column.</em:description>
         <em:creator>Yonas Yanfa</em:creator>
         <em:optionsURL>chrome://messenger/content/preferences/preferences.xul</em:optionsURL>
         <em:iconURL>chrome://superdateformat/content/icon.png</em:iconURL>
@@ -14,7 +14,7 @@
             <Description>
                 <em:id>{3550f703-e582-4d05-9a08-453d09bdfdc6}</em:id>
                 <em:minVersion>10.0</em:minVersion>
-                <em:maxVersion>12.*</em:maxVersion>
+                <em:maxVersion>16.*</em:maxVersion>
             </Description>
         </em:targetApplication>
 
