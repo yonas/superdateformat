@@ -9,9 +9,12 @@
                 <preference id="extensions.superDateFormat.dateFormat"
 		            name="extensions.superDateFormat.dateFormat"
                             type="string"/>
-                <preference id="extensions.superDateFormat.dateColumnName"
-		            name="extensions.superDateFormat.dateColumnName"
-                            type="string"/>
+                <preference id="extensions.superDateFormat.sortDateCol"
+		            name="extensions.superDateFormat.sortDateCol"
+                            type="bool"/>
+                <preference id="extensions.superDateFormat.sortReceivedCol"
+		            name="extensions.superDateFormat.sortReceivedCol"
+                            type="bool"/>
             </preferences>
             <tabbox id="superDateFormatTabBox">
                 <tabs id="superDateFormatTabs">
@@ -236,9 +239,13 @@
                     </tabpanel>
                     <tabpanel id="superDateFormatTabPanelPreferences" orient="vertical">
                         <vbox id="superDateFormatPreferencesBoxPreferences">
-			   <label id="dateColumnNameLabel" control="dateColumnNameBox" value="Date column name:"/>
-			   <textbox id="dateColumnNameBox" preference="extensions.superDateFormat.dateColumnName"/>
-			   <description>* Requires restart</description>
+               <checkbox id="superDateFormatSortDateCol" label="Enable on Date column" preference="extensions.superDateFormat.sortDateCol"/>
+               <description>Apply your custom date format to the Date column.</description>
+               <separator class="groove-thin"/>
+               <checkbox id="superDateFormatSortReceivedCol" label="Enable on Received column" preference="extensions.superDateFormat.sortReceivedCol"/>
+               <description>Apply your custom date format to the Received column.</description>
+               <separator class="groove-thin"/>
+               <description>* Requires restart</description>
 			</vbox>
                     </tabpanel>
                 </tabpanels>
@@ -246,6 +253,7 @@
         </prefpane>
     </prefwindow>
 
-  <!-- include our javascript file -->
+  <!-- include our javascript files -->
+  <script type="text/javascript" src="chrome://superdateformat/content/namespace.js"/> 
   <script type="text/javascript" src="chrome://superdateformat/content/messenger-overlay-preferences.js"/> 
 </overlay>

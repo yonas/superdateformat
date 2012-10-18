@@ -1,12 +1,23 @@
-var prefs = new superDateFormat_PrefManager();
+SuperDateFormat.ColumnHandler = function(colName) {
+    this.colName = colName;
+};
 
-var columnHandler = {
-   getCellText:         function(row, col) {
+SuperDateFormat.ColumnHandler.prototype = {
+   getCellText: function(row, col) {
       //get the message's header so that we can extract the date field
       var hdr = gDBView.getMsgHdrAt(row);
-      var date = new Date(hdr.date/1000);
+      var date = new Date(this._fetchDate(hdr));
       
-      return date.toLocaleFormat(prefs.getValue('dateFormat', ''));
+      return date.toLocaleFormat(SuperDateFormat.prefs.getValue('dateFormat', ''));
+   },
+   _fetchDate: function(hdr) {
+       if (this.colName == "dateCol") {
+           return hdr.date / 1000;
+       } else if (this.colName == "receivedCol") {
+           return hdr.getUint32Property("dateReceived") * 1000;
+       } else {
+           return null;
+       }
    },
    getSortStringForRow: function(hdr) {return hdr.date;},
    isString:            function() {return true;},
@@ -15,27 +26,25 @@ var columnHandler = {
    getRowProperties:    function(row, props){},
    getImageSrc:         function(row, col) {return null;},
    getSortLongForRow:   function(hdr) {return hdr.date;}
-}
+};
 
-function addCustomColumnHandler() {
-   gDBView.addColumnHandler("colDate2", columnHandler);
-}
-
-var CreateDbObserver = {
+SuperDateFormat.CreateDbObserver = {
   // Components.interfaces.nsIObserver
   observe: function(aMsgFolder, aTopic, aData)
   {  
-     addCustomColumnHandler();
+      if (SuperDateFormat.prefs.getValue('sortDateCol', false)) {
+          gDBView.addColumnHandler("dateCol", new SuperDateFormat.ColumnHandler('dateCol'));
+      }
 
-     var col = document.getElementById('colDate2');
-     col.setAttribute('label', prefs.getValue('dateColumnName', ''));
+      if (SuperDateFormat.prefs.getValue('sortReceivedCol', false)) {
+          gDBView.addColumnHandler("receivedCol", new SuperDateFormat.ColumnHandler('receivedCol'));
+      }
   }
-}
+};
 
-function doOnceLoaded() {
+SuperDateFormat.doOnceLoaded = function() {
   var ObserverService = Components.classes["@mozilla.org/observer-service;1"].getService(Components.interfaces.nsIObserverService);
-  ObserverService.addObserver(CreateDbObserver, "MsgCreateDBView", false);
-}
+  ObserverService.addObserver(SuperDateFormat.CreateDbObserver, "MsgCreateDBView", false);
+};
 
-
-window.addEventListener("load", doOnceLoaded, false);
+window.addEventListener("load", SuperDateFormat.doOnceLoaded, false);

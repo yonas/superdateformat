@@ -1,4 +1,4 @@
-function superDateFormat_PrefManager() {
+SuperDateFormat.PrefManager = function() {
     var startPoint="extensions.superDateFormat.";
 
     var pref=Components.classes["@mozilla.org/preferences-service;1"].
@@ -90,3 +90,5 @@ function superDateFormat_PrefManager() {
         }
     }
 }
+
+SuperDateFormat.prefs = new SuperDateFormat.PrefManager();
