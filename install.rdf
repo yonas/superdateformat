@@ -3,7 +3,7 @@
     <Description about="urn:mozilla:install-manifest">
         <em:id>superdateformat@buildontechnologies.com</em:id>
         <em:name>Super Date Format</em:name>
-        <em:version>1.0</em:version>
+        <em:version>1.1</em:version>
         <em:description>Fully customize the date format of the Date/Received column.</em:description>
         <em:creator>Yonas Yanfa</em:creator>
         <em:optionsURL>chrome://messenger/content/preferences/preferences.xul</em:optionsURL>
